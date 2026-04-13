@@ -3,7 +3,7 @@ pub mod user_interface {
     use crate::account::Account;
 
     pub fn print_title() {
-        println!("--ACCOUNTS--");
+        println!("--ACCOUNTS v0.1.0--");
     }
 
     pub fn prompt_info() -> Account {
