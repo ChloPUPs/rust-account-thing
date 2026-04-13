@@ -15,7 +15,7 @@ pub mod user_interface {
 
         let display_name = get_input_for_str("Display Name");
         let password = get_input_for_str_no_space("Password");
-        let email = get_input_for_str_no_space("Email");
+        let email = get_input_for_str_no_space("EMail");
 
         Account {
             user_id: rand::random_range(0..i64::MAX),
