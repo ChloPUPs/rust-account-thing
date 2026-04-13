@@ -40,7 +40,7 @@ pub fn prompt_logged_in(account: &Account) -> LoopedFunctionReturn {
         println!("Goodbye! Logging out...");
         LoopedFunctionReturn { quit_wanted: true }
     } else {
-        println!("\n{}", util::INVALID_INPUT_MESSAGE);
+        println!("{}\n", util::INVALID_INPUT_MESSAGE);
         LoopedFunctionReturn { quit_wanted: false }
     }
 }
