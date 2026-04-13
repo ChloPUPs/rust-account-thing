@@ -1,6 +1,6 @@
 use std::io::{self, Write};
 
-const INVALID_INPUT_MESSAGE: &str = "Invalid Input! Try again.";
+pub const INVALID_INPUT_MESSAGE: &str = "Invalid Input! Try again.";
 
 pub fn get_input_for_str(input_name: &str) -> String {
     let ret_val: String;
