@@ -47,6 +47,8 @@ pub mod user_interface {
     }
 }
 
+use chrono::{Local, Timelike};
+
 #[derive(Debug)]
 pub struct Account {
     pub user_id: i64,
@@ -64,6 +66,17 @@ impl Account {
     }
     
     fn post(&self, msg: &str) {
-        println!("Created new post!\n\n{}: {}", self.display_name, msg);
+        let local = Local::now();
+        let time_str = format!("{}:{}:{} {}",
+            if local.hour() > 12 { local.hour() - 12 } else { local.hour() },
+            local.minute(),
+            local.second(),
+            if local.hour() > 12 { "PM" } else { "AM" },
+        );
+
+        println!("Created new post!\n\n[{}] {}: {}",
+            time_str,
+            self.display_name, msg
+        );
     }
 }
